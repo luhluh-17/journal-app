@@ -1,8 +1,12 @@
 class TasksController < ApplicationController
-  before_action :set_task, only: %i[show edit update destroy]
+  before_action :require_user_logged_in, :set_task, only: %i[show edit update destroy]
 
   def index
-    @tasks = Task.all
+    if user_signed_in?
+      @tasks = Task.all
+    else
+      redirect_to new_user_session_path, notice: 'You are not logged in.'
+    end
   end
 
   def show; end
