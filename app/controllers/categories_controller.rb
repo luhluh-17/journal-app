@@ -1,5 +1,5 @@
 class CategoriesController < ApplicationController
-  before_action :require_user_logged_in!,
+  before_action :require_user_logged_in,
                 :set_category,
                 only: %i[show edit update destroy]
 
