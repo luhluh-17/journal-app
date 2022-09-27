@@ -7,7 +7,7 @@ class CategoriesController < ApplicationController
     if user_signed_in?
       @categories = Category.where(user_id: current_user.id)
     else
-      redirect_to new_user_session_path, notice: 'You are not logged in.'
+      redirect_to new_user_session_path, alert: 'You are not logged in.'
     end
   end
 
