@@ -1,12 +1,15 @@
-<main class="main-container">
-  <%= render partial: 'shared/navbar'%>
+<main>
+  <%= render 'shared/navbar'%>
   <div class="home-container">
     <div class="greetings-container">
       <h6 class="greetings-title"> Hello <%= current_user.email %>,</h6>
-      <h3 class="greetings-subtitle">Here is your task for today</h2>
+      <h3 class="greetings-subtitle">Here is your tasks for today</h2>
     </div>
-    <div class="Task Container">
-      Task
+    <div class="categories-container mt-3">
+      <%= render 'categories/display' %>
+    </div>
+    <div>
+      <%= render 'tasks/display' %>
     </div>
   </div>
 </main>

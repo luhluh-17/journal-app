@@ -1,0 +1,8 @@
+<div id="categories">
+  <% @categories.each do |category| %>
+    <h6>
+      <%= link_to "( #{count_task(category)} ) #{category.title}", category, class: "chip-custom" %>
+    </h6>
+  <% end %>
+</div>
+<%= link_to "Add Category", new_category_path, class: "button-custom" %>

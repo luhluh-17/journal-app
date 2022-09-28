@@ -10,14 +10,14 @@
     </div>
   <% end %>
   <div>
-    <%= form.label :user_id, style: "display: block" %>
-    <%= form.text_field :user_id, value: current_user.id %>
+    <%= form.label :user_id, class: "form-custom-label"%>
+    <%= form.text_field :user_id, value: current_user.id, class: "form-custom-input" %>
   </div>
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class: "form-custom-label" %>
+    <%= form.text_field :title, class: "form-custom-input" %>
   </div>
-  <div>
+  <div class="mt-4">
     <%= form.submit %>
   </div>
 <% end %>
