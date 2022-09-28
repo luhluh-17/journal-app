@@ -3,7 +3,8 @@ class TasksController < ApplicationController
 
   def index
     if user_signed_in?
-      @tasks = Task.all
+      @tasks = Task.where(category_id: params[:id]).all
+      # @tasks = current_user.categories.map { |category| category.tasks }
     else
       redirect_to new_user_session_path, alert: 'You are not logged in.'
     end
