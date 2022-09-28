@@ -86,7 +86,6 @@ h5 {
   font-family: var(--headingFont);
   font-weight: 400;
   line-height: 1.3;
-  text-transform: capitalize;
   letter-spacing: var(--letterSpacing);
 }
 
@@ -130,20 +129,6 @@ ul {
   object-fit: cover;
 }
 
-.title-custom {
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-.title-heading {
-  font-family: 'Josefin Sans', sans-serif;
-  font-weight: 600;
-  font-size: 5rem;
-}
-
-.subtitle-heading {
-  font-style: italic;
-}
-
 .navbar-custom {
   background-color: var(--primary-800);
 }
@@ -167,8 +152,8 @@ ul {
   color: white;
 }
 .button-custom-hipster {
-  color: var(--primary-500);
-  background: var(--primary-200);
+  color: var(--white);
+  background: var(--primary-700);
 }
 .button-custom-hipster:hover {
   color: var(--primary-200);
@@ -226,6 +211,33 @@ ul {
   width: 100%;
 }
 
+/* Titles */
+.title-custom {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.title-heading {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+  font-size: 5rem;
+}
+
+.subtitle-heading {
+  font-style: italic;
+}
+
+.greetings-title {
+  font-family: 'Josefin Sans', sans-serif;
+  color: var(--grey-500);
+}
+
+.greetings-subtitle {
+  margin: 0;
+  line-height: 0;
+  font-weight: 600;
+}
+
+/* Containers */
 .main-container {
   height: 100vh;
   width: 100vw;
@@ -239,6 +251,16 @@ ul {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.home-container {
+  display: flex;
+  padding: 1rem;
+}
+
+.greetings-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .account-form-container {
