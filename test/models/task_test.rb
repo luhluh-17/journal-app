@@ -1,6 +1,18 @@
 require 'test_helper'
 
 class TaskTest < ActiveSupport::TestCase
+  def setup
+    @category = Category.create(title: 'Sample')
+  end
+
+  test 'category exist' do
+    task = Task.new
+    task.title = 'Work'
+    task.body = 'Sample'
+    task.category = @category
+    assert task.save, 'Saved the task with category'
+  end
+
   test 'category does not exist' do
     task = Task.new
     task.title = 'Study Programming'
@@ -21,6 +33,6 @@ class TaskTest < ActiveSupport::TestCase
     task.body = ''
     task.title = 'C'
     refute task.valid?
-    assert_not_nil category.errors[:title], 'Saved the tesk with minimum length'
+    assert_not_nil task.errors[:title], 'Saved the tesk with minimum length'
   end
 end
