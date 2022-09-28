@@ -6,4 +6,9 @@ module TasksHelper
     end
     array
   end
+
+  def get_category(category_id)
+    category = Category.where(id: category_id)
+    category.class
+  end
 end
