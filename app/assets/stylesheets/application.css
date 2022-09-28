@@ -170,6 +170,54 @@ ul {
   width: 100%;
 }
 
+/* form */
+
+.form-custom {
+  width: 90vw;
+  max-width: 400px;
+  background: var(--white);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  padding: 2rem 2.5rem;
+  margin: 3rem 0;
+}
+.form-custom-label {
+  display: block;
+  font-size: var(--small-text);
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+  letter-spacing: var(--letterSpacing);
+}
+.form-custom-input,
+.form-custom-textarea {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  border-radius: var(--borderRadius);
+  background: var(--backgroundColor);
+  border: 1px solid var(--grey-200);
+}
+
+.form-custom-row {
+  margin-bottom: 1rem;
+}
+
+.form-custom-textarea {
+  height: 7rem;
+}
+::placeholder {
+  font-family: inherit;
+  color: var(--grey-400);
+}
+.form-custom-alert {
+  color: var(--red-dark);
+  letter-spacing: var(--letterSpacing);
+  text-transform: capitalize;
+}
+
+.form-custom-btn {
+  width: 100%;
+}
+
 .main-container {
   height: 100vh;
   width: 100vw;
@@ -179,6 +227,13 @@ ul {
 .landing-container {
   height: 100vh;
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
