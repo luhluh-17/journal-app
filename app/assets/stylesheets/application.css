@@ -229,12 +229,13 @@ ul {
 .greetings-title {
   font-family: 'Josefin Sans', sans-serif;
   color: var(--grey-500);
+  font-weight: 600;
 }
 
 .greetings-subtitle {
-  margin: 0;
   line-height: 0;
   font-weight: 600;
+  margin-top: 0.25rem;
 }
 
 /* Containers */
@@ -255,6 +256,7 @@ ul {
 
 .home-container {
   display: flex;
+  flex-direction: column;
   padding: 1rem;
 }
 
@@ -263,7 +265,10 @@ ul {
   flex-direction: column;
 }
 
-.account-form-container {
+.task-container {
+}
+
+.task .account-form-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
