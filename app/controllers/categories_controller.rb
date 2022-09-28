@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
 
   def index
     if user_signed_in?
-      @categories = Category.where(user_id: current_user.id)
+      @categories = current_user.categories
     else
       redirect_to new_user_session_path, alert: 'You are not logged in.'
     end
