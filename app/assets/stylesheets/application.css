@@ -144,6 +144,10 @@ ul {
   font-style: italic;
 }
 
+.navbar-custom {
+  background-color: var(--primary-800);
+}
+
 .button-custom {
   cursor: pointer;
   color: var(--white);
