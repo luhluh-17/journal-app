@@ -1,22 +1,8 @@
 <div id="<%= dom_id task %>">
-  <p>
-    <strong>Title:</strong>
-    <%= task.title %>
-  </p>
-
-  <p>
-    <strong>Body:</strong>
-    <%= task.body %>
-  </p>
-
-  <p>
-    <strong>Is completed:</strong>
-    <%= task.is_completed %>
-  </p>
-
-  <p>
-    <strong>Category:</strong>
-    <%= task.category_id %>
-  </p>
-
+  <div>
+    <p><%= task.updated_at %></p>
+    <p> <%= get_category(task.category_id) %></p>
+    <p><%= task.title %></p>
+  </div>
+  <p><%= task.body %></p>
 </div>

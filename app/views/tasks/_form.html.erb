@@ -10,22 +10,18 @@
     </div>
   <% end %>
   <div>
-    <%= form.label :title, style: "display: block" %>
-    <%= form.text_field :title %>
+    <%= form.label :title, class: "form-custom-label" %>
+    <%= form.text_field :title, class: "form-custom-input" %>
   </div>
   <div>
     <%= form.label :body, style: "display: block" %>
-    <%= form.text_field :body %>
+    <%= form.text_field :body, class: "form-custom-input" %>
   </div>
   <div>
-    <%= form.label :is_completed, style: "display: block" %>
-    <%= form.check_box :is_completed %>
-  </div>
-  <div>
-    <%= form.label :category_id, style: "display: block" %>
+    <%= form.label :category_id, class: "form-custom-label" %>
     <%= form.select :category_id, set_select_option %>
   </div>
-  <div>
+  <div class="mt-2">
     <%= form.submit %>
   </div>
 <% end %>

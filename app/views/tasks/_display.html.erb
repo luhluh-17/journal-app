@@ -1,0 +1,9 @@
+<div id="tasks">
+  <% @tasks.each do |task| %>
+    <div class="form-custom">
+      <%= render task %>
+      <%= link_to "View", task, class: "button-custom" %>
+    </div>
+  <% end %>
+</div>
+<%= link_to "New task", new_task_path %>
