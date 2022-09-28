@@ -243,3 +243,10 @@ ul {
   justify-content: center;
   align-items: center;
 }
+
+.alert-custom {
+  width: 25vw;
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
