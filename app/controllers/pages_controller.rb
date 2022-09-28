@@ -5,5 +5,8 @@ class PagesController < ApplicationController
     redirect_to home_path if user_signed_in?
   end
 
-  def pages; end
+  def home
+    @categories = current_user.categories
+    @tasks = Task.all
+  end
 end
