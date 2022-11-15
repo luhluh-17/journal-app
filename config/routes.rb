@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   devise_for :users
-  get 'home/index'
-  root 'home#index'
+  root 'categories#index'
 end
