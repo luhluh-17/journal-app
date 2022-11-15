@@ -12,7 +12,9 @@
   <body class="flex flex-row">
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= render 'shared/sidebar' %>
+    <% unless current_user.nil? %>
+      <%= render 'shared/sidebar' %>
+    <% end %>
     <main class="container mx-auto px-5 py-5 flex">
       <%= yield %>
     </main>
