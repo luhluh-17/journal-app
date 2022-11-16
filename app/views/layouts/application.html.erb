@@ -14,7 +14,7 @@
     <% unless current_user.nil? %>
       <%= render 'shared/sidebar' %>
     <% end %>
-    <main class="container mx-auto px-5 py-5 flex">
+    <main class="container mx-auto flex">
       <%= yield %>
     </main>
   </body>
