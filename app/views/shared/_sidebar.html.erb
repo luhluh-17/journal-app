@@ -7,22 +7,24 @@
       <ul class="space-y-2">
         <li>
           <%= link_to categories_path, class: "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" do %>
-            <%= render 'icons/category-icon' %>
-            <span class="ml-3">Category</span>
+            <%= render "icons/category-icon" %>
+            <span class="ml-3">Categories</span>
           <% end %>
         </li>
         <li>
-          <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-            <%= render 'icons/task-icon' %>
-            <span class="flex-1 ml-3 whitespace-nowrap">Task</span>
+          <%= link_to tasks_path, class: "flex justify-between items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700" do %>
+            <div class="flex items-center">
+              <%= render "icons/task-icon" %>
+              <span class="ml-3">Tasks</span>
+            </div>
             <span class="inline-flex justify-center items-center p-3 ml-3 w-3 h-3 text-sm font-medium text-blue-600 bg-blue-200 rounded-full dark:bg-blue-900 dark:text-blue-200">3</span>
-          </a>
+          <% end %>
         </li>
       </ul>
       <ul class="pt-4 mt-4 space-y-2 border-t border-gray-200 dark:border-gray-700">
         <li>
           <%= link_to destroy_user_session_path, class: "flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700", data: { turbo_method: :delete } do %>
-            <%= render 'icons/logout-icon' %>
+            <%= render "icons/logout-icon" %>
             <span class="flex-1 ml-3 whitespace-nowrap">Logout</span>
           <% end %>
         </li>
