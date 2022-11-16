@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_task, only: %i[show edit update destroy]
 
   def index
-    @tasks = current_user.categories.map(&:tasks).flatten
+    @tasks = current_user.categories.map(&:tasks).flatten.sort_by { |task| task[:deadline] }
   end
 
   def show; end
