@@ -5,7 +5,9 @@ class CategoriesController < ApplicationController
     @categories = current_user.categories
   end
 
-  def show; end
+  def show
+    @tasks = @category.tasks
+  end
 
   def new
     @category = Category.new
