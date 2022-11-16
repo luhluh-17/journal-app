@@ -1,0 +1,7 @@
+<div id="<%= dom_id task %>">
+  <%= link_to task, class: task_style(task.priority_level) do %>
+    <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"><%= task.title %></h5>
+    <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"><%= task.deadline %></h5>
+    <h5 class="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"><%= get_category(task.category_id) %></h5>
+  <% end %>
+</div>
