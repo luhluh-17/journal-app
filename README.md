@@ -2,10 +2,13 @@
 A Ruby on Rails 7 application that keep tracks of your daily tasks
 
 ### 💻 Features:
-* Use Devise gem for user login and registration
-* Sidebar panel for navigation and displaying the total number of categories and tasks
-* User can view all tasks or view them by category and sorted by deadline
-* Tasks styling changes depending on priority level
+* Implemented account registration and sessions using the Devise gem by generating a Devise User model.
+* Used the Tailwind CSS framework to make it easier to build and write the front-end portion of the application.
+* Added a sidebar panel for navigation and displaying the total number of categories and tasks.
+* Users can show the list by categories or all tasks in the ActionView, and they can add, edit, and delete tasks and categories.
+* Added a helper function to change the color of the tasks depending on the priority level in the TaskHelper module.
+* Used Minitest for unit testing to validate the model.
+
 
 ### 🚀 Live Demo
 https://rails-journey.fly.dev/
